@@ -8,6 +8,8 @@ import Hook from "./StudyHook"
 import HomeWork from './HomeWork';
 import StudyContextHook from './StudyContextHook';
 import { ThemeProvider } from './ThemeContext';
+import TodoListUseContext from './TodoListUseContext';
+import { ProviderStore } from "./store"
 
 const root = createRoot(document.getElementById("root"));
 root.render(
@@ -15,8 +17,11 @@ root.render(
     {/* <App /> */}
     {/* <Gallery /> */}
     {/* <Hook /> */}
-    <ThemeProvider>
+    {/* <ThemeProvider>
       <StudyContextHook/>
-    </ThemeProvider>
+    </ThemeProvider> */}
+    <ProviderStore>
+      <TodoListUseContext />
+    </ProviderStore>
   </StrictMode>
 );
